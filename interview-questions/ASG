@@ -1,0 +1,8 @@
+ASG: it is a cloud computing feature that allows you to automatically adjust the no. of computing resourses, such as virtual m/c or containers based on the current workload or demand.
+The goal of ASG is to ensure that your applications run efficiently, maintain performance and minimize the cost by scaling up or down as needed.
+
+**how to asg work
+resource monitoring
+scaling policies
+vertical scaling
+horizontal scaling
