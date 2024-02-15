@@ -1,4 +1,6 @@
-Certainly! Here are 20 interview questions related to Elastic Load Balancers (ELBs) in AWS, along with detailed answers in Markdown format:
+its primary purpose is to distribute the incoming network traffic across a group of backend servers.
+LB acts as a inermediater between client devices & backend servers
+it receive incoming network requests and forward them one of available backend servers.
 
 ## Elastic Load Balancers (ELBs) Interview Questions
 
