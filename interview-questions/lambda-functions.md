@@ -1,3 +1,5 @@
+Certainely AWS lambda is a serverless computing service which provides by aws. it allows you to run code without provisioning/ managing servers. with lambda you can focus on your application code, and aws take care of the infra, scaling & servers maintainance.
+
 ### 1. What is AWS Lambda?
 AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. It automatically scales and manages the infrastructure required to run your code in response to events.
 
