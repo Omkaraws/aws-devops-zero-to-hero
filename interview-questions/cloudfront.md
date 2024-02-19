@@ -1,3 +1,7 @@
+Cloud Front: it is aws very own CDN service. It integrate seamlessly with other aws svc. it allows to deliver content, application, and api securely wit low latency and high transfer speed.
+
+CONTENT DELIVERY NETWORK: cash the content in the nearest edge. it is like a network of SVC spread across various locations worldwide. These servers stores a copy of websites content , when a user requests your website, the content is delivered from the server closest to the user.
+
 ### 1. What is Amazon CloudFront?
 Amazon CloudFront is a Content Delivery Network (CDN) service provided by AWS that accelerates content delivery by distributing it across a network of edge locations.
 
