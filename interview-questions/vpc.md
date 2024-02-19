@@ -10,6 +10,9 @@ Amazon VPC enables you to create a private and secure network within AWS. You de
 ### 4. What are VPC subnets?
 VPC subnets are segments of the VPC's IP address range. They allow you to isolate resources and control access by creating public and private subnets.
 
+PUBLIC SUBNET: if subnet's traffic is routed to an internet gateway, the s.n. is knownn as public subnet
+PRIVATE SUBNET: if subnet doesn't have a route to the internet gateway 
+
 ### 5. How can you connect your on-premises network to Amazon VPC?
 You can establish a Virtual Private Network (VPN) connection or use AWS Direct Connect to connect your on-premises network to Amazon VPC.
 
@@ -57,3 +60,5 @@ A default route in a route table directs traffic to the Internet Gateway (IGW), 
 
 ### 20. What is the purpose of the Amazon VPC Endpoint?
 An Amazon VPC Endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services without needing an internet gateway or VPN connection.
+
+NAT GATEWAY: u can use it for enable instance in a private S.N. to connect to a internet
