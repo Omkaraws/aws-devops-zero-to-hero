@@ -1,3 +1,11 @@
+CLOUD WATCH FEATURES:
+1.Monitoring( infra & APPLication)
+2.real life metrics ( Like cpu, memory utilization) collect info.
+3.Alarms
+4. Log insights
+5.Custom metrics ( cpu utilization, track own application, memory of instance)
+6. cost optimization (reduce maintainance, improve security)
+
 ### 1. What is Amazon CloudWatch?
 Amazon CloudWatch is a monitoring and observability service that provides insights into your AWS resources and applications by collecting and tracking metrics, logs, and events.
 
