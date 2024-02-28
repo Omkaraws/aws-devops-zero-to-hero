@@ -1,3 +1,17 @@
+Public Subnet: if a subnet’s traffic is routed to an internet gateway, the subnet is known as public subnet. If you want your instance in a public subnet to communicate with the internet over IPV4,
+it must have a public IPV4 address or an Elastic IP address.
+Private Subnet: if a subnet doesn’t have a route to the internet gateway, the subnet is known as private subnet. When you create a VPC you must specify an IPV4 CIDR block for the VPC. The allowed blocks size is between /16 to /28 networks. The first four and last IP address of subnet cannot be assigned.\
+
+The instances in the public subnet can send outbound traffic directly to the internet, but instances in private subnet can’t.
+For e.g: 10.0.0.0- network address
+10.0.0.1- reserved by AWS for the VPC router
+10.0.0.2- reserved by AWS the IP address of DNS server
+10.0.0.3- reserved for future use
+10.0.0.255- broadcast address
+Note: AWS do not support broadcast in a VPC but reserve this address.
+
+
+
 ### 1. What is Amazon Virtual Private Cloud (VPC)?
 Amazon VPC is a logically isolated section of the AWS Cloud where you can launch resources in a virtual network that you define. It allows you to control your network environment, including IP addresses, subnets, and security settings.
 
@@ -61,4 +75,12 @@ A default route in a route table directs traffic to the Internet Gateway (IGW), 
 ### 20. What is the purpose of the Amazon VPC Endpoint?
 An Amazon VPC Endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services without needing an internet gateway or VPN connection.
 
-NAT GATEWAY: u can use it for enable instance in a private S.N. to connect to a internet
+NAT GATEWAY: u can use it for enable instance in a private S.N. to connect to a internet.
+NAT Gateway:
+ You can use a network address translation gateway to enable instances in a private subnet to connect to the internet or other AWS services but prevent the internet from initiating a connection with those instances.
+ You are charged for creating and using a NAT gateway in your account. NAT gateway hourly usage and data processing rates apply. Amazon EC2 charges for data transfer also apply.
+ To create a NAT gateway, you must specify the public subnet in which the NAT gateway should reside.
+ You must also specify an elastic IP address to associate with NAT gateway when you create it.
+ No need to assign public IP address to your private instance.
+ After you have created a NAT gateway you must update the route table associated with one or more of your private subnets to point internet bound traffic to the NAT gateway. This enables instances in your private subnet to communicate with the internet.
+ Deleting a NAT gateway, disassociates its elastic IP address, but does not release the address from your account.
