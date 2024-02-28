@@ -75,12 +75,62 @@ A default route in a route table directs traffic to the Internet Gateway (IGW), 
 ### 20. What is the purpose of the Amazon VPC Endpoint?
 An Amazon VPC Endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services without needing an internet gateway or VPN connection.
 
-NAT GATEWAY: u can use it for enable instance in a private S.N. to connect to a internet.
+### NAT GATEWAY: u can use it for enable instance in a private S.N. to connect to a internet.
 NAT Gateway:
- You can use a network address translation gateway to enable instances in a private subnet to connect to the internet or other AWS services but prevent the internet from initiating a connection with those instances.
- You are charged for creating and using a NAT gateway in your account. NAT gateway hourly usage and data processing rates apply. Amazon EC2 charges for data transfer also apply.
- To create a NAT gateway, you must specify the public subnet in which the NAT gateway should reside.
- You must also specify an elastic IP address to associate with NAT gateway when you create it.
- No need to assign public IP address to your private instance.
- After you have created a NAT gateway you must update the route table associated with one or more of your private subnets to point internet bound traffic to the NAT gateway. This enables instances in your private subnet to communicate with the internet.
- Deleting a NAT gateway, disassociates its elastic IP address, but does not release the address from your account.
+You can use a network address translation gateway to enable instances in a private subnet to connect to the internet or other AWS services but prevent the internet from initiating a connection with those instances.
+
+You are charged for creating and using a NAT gateway in your account. NAT gateway hourly usage and data processing rates apply. Amazon EC2 charges for data transfer also apply.
+
+To create a NAT gateway, you must specify the public subnet in which the NAT gateway should reside.
+
+You must also specify an elastic IP address to associate with NAT gateway when you create it.
+
+No need to assign public IP address to your private instance.
+After you have created a NAT gateway you must update the route table associated with one or more of your private subnets to point internet bound traffic to the NAT gateway. This enables instances in your private subnet to communicate with the internet.
+
+Deleting a NAT gateway, disassociates its elastic IP address, but does not release the address from your account.
+
+### Implied Router and Routing Table:
+ It is the central routing function.
+ It connects the different AZ together and connects the VPC to the internet gateway.
+ You can have up to 200 route tables per VPC.
+ You can have up to 50 routes entries per route table.
+ Each subnet must be associated with only one route table at any given time only.
+ If you don’t specify a subnet to route table association, the subnet will be associated with the default VPC route table.
+ You can also edit the main route table if you need but you cannot delete the main route table.
+ However you can make a custom route table manually become the main route table then you can delete the former main as it is no longer a main route table.
+ You can associate multiple subnets with the same route table.
+
+C. Internet Gateway:
+ An internet gateway is a virtual router that connects a VPC to the internet.
+ Default VPC is already attached with an internet gateway.
+ If you create a new VPC then you must attach the internet gateway in order to access the internet.
+ Ensure that your subnet’s route table points to the internet gateway.
+ It performs NAT between your private and public IPV4 address.
+ It supports both IPV4 and IPV6.
+
+Security Group:
+ It is a virtual firewall works at ENI level.
+ Up to 5 security groups per EC2 instance interface can be applied.
+ Can only have permit rules, cannot have deny rules.
+ Stateful, return traffic of allowed inbound traffic is allowed even if there are no rules to allow it.
+
+
+E. NACL:
+ It is a function performed on the implied router.
+ NACL is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets.
+ Your VPC automatically comes with a modifiable default NACL. By default, it allows all inbound and outbound IPV4 traffic and if applicable IPV6 traffic.
+ You can create a custom NACL and associate it with a subnet. By default each NACL denies all inbound and outbound traffic until you add rules.
+ Each subnet in your VPC must be associated with a NACL. If you don’t explicitly associate a subnet with a NACL, the Subnet is automatically associated with the default NACL.
+ You can associate a NACL with multiple subnets; however a subnet can be associated with only one NACL at a time. When you associate a NACL with a subnet the previous association is removed.
+ A NACL contains a numbered list of rules that we evaluate in order starting with the lowest numbered rule.
+ The highest number that you can use for a rule is 32766. Recommended that you start by creating rules with rule numbers that a multiple of 100, so that you can insert new rules where you need later.
+ It functions at the subnet level.
+ NACL are stateless, outbound traffic for an allowed inbound traffic must be explicitly allowed too.
+ You can have permit and deny rules in a NACL.
+
+
+VPC Peering:
+ A VPC peering connection is a network connection between two VPC that enables you to route traffic between them using private IPV4 addresses or IPV6 addresses.
+ Instances in either VPC can communicate with each other as if they are within the same network.
+ You can create a VPC peering connection between your own VPC or with a VPC in another AWS account. The VPC can be in different region
