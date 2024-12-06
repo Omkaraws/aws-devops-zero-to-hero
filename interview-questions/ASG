@@ -8,3 +8,37 @@ resource monitoring
 scaling policies
 vertical scaling
 horizontal scaling
+
+
+Scaling Policies:
+Generally scaling policy is of two types such as:
+1. Manual
+2. Dynamic
+Again dynamic policy is divided into three categories as follows:
+A. Target Tracking
+B. Simple Scaling Policy
+C. Step Scaling Policy
+
+ Define how much you want to scale based on defined conditions.
+ ASG uses alarms and policies to determine scaling.
+ For Simple or Step scaling a scaling adjustment can’t change the capacity of the group 
+above the maximum group or below the minimum group.
+
+Predictive/Scheduled/Cycle Scaling: it looks at historic pattern and forecast them into the 
+future to schedule change in the number of EC2 instances. It uses machine learning model 
+to forecast daily and weekly pattern.
+
+Target Tracking Policies: increase or decrease the current capacity of the group based on 
+a target value for specific metric. This is similar to the way that your thermostatic maintain 
+the temperature of your home.
+
+Step Scaling: increase or decrease the current capacity of the group based on a set of 
+scaling adjustment known as step adjustment that vary based on the size of the alarm 
+breach. It does not support/ wait for cool down times. It supports warm-up timer: time taken 
+by newly launched instance to be ready and contribute to the watched metric.
+
+Simple Scaling: single adjustment (up or down) in response to an alarm (cool down timer300sec by default)
+
+Schedule Scaling: used for predictable load change. You need to configure a schedule 
+action for a scale out at a specific date/time and to a required capacity. A scheduled action 
+must have a unique data/time. You cannot configure two sch
