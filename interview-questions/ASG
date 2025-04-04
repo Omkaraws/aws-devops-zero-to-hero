@@ -4,6 +4,10 @@ creating grp of ec2 instances that can scale up or scale down depending on condi
 ASG helps you save cost by cutting down the no. of ec2 instances when not needed and scalling out to add more instances only when it is required.
 
 
+Vertical scaling (scaling up): increases the capacity of a single machine by adding more resources like CPU, RAM, or storage, 
+Horizontal scaling (scaling out): adds more machines to distribute the workload across multiple systems. 
+
+
 VERTICAL SCALLING:
 SCALE UP:INCREASING RESOURCES LIKE CPU, RAM, VOLUME/STORAGE
 SCALE DOWN: DECREASING THE RESOURCES.
