@@ -59,3 +59,29 @@ Amazon ML is a service that enables you to build predictive models using machine
 
 ### 20. What is Amazon EC2 Instance Connect?
 Amazon EC2 Instance Connect provides a simple and secure way to connect to your instances using Secure Shell (SSH). It eliminates the need to use key pairs and allows you to connect using your AWS Management Console credentials.
+
+### 21. What is the types of cloud?
+
+PRIVATE CLOUD: Private cloud is a cloud computing enjoinment in which all hardware and software resources are dedicated exclusively to, or accessible by a single customer.
+It’s a on-premises infrastructure.
+Companies choose private cloud because their workload deals with confidential documents, financial data etc.
+Private cloud is a single-tenant environment, meaning all resources are accessible to one customer only—this is referred to as isolated access. Private clouds are typically hosted on-premises in the customer's data center.
+
+PUBLIC CLOUD: Public cloud is a multi-tenant cloud environment, where the same computing resources are shared among multiple customers—sometimes hundreds or thousands of them.
+
+HYBRID CLOUD: A hybrid cloud integrates public and private cloud infrastructures. In this model, the two types of cloud are joined together into a single, flexible infrastructure, and the enterprise can choose the optimal cloud environment for each individual application or workload.
+In simple words infra is shared in between your local data center and public cloud.
+
+### 22. what is the Categories of cloud/ Cloud Services..?
+SAAS (Software as a service):-
+Here a particular software program is hosted as a service over the internet, and the user doesn’t need to have any software technical knowledge to use that service
+Eg:- Google Drive, Drop box etc.
+
+PASS (Platform as a service):-
+PASS or aPass (application platform as a service) is category of cloud computing service that enables customer to run a application.
+The only major difference between SaaS and PaaS is that - SaaS provides access to the software over the internet while PaaS provides a platform for software development
+
+IAAS (infrastructure as a service):-
+This as the name suggest, this is a service where the software infra such as physical servers, RAM, CPU etc. is provided as a service to the customer as per their requirement.
+Mostly used by companies to run their day to day operations.
+Hence, unlike SaaS and PaaS, IaaS is a whole virtualization technology where clients have access to the whole infrastructure through an API or dashboard. 
