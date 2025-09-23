@@ -8,7 +8,7 @@ For e.g: 10.0.0.0- network address
 10.0.0.1- reserved by AWS for the VPC router
 10.0.0.2- reserved by AWS the IP address of DNS server
 10.0.0.3- reserved for future use
-10.0.0.255- broadcast address
+10.0.0.255- broadcast address,
 Note: AWS do not support broadcast in a VPC but reserve this address.
 
 
