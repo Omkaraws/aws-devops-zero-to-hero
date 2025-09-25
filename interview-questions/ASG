@@ -9,10 +9,15 @@ Horizontal scaling (scaling out): adds more machines to distribute the workload 
 
 
 VERTICAL SCALLING:
+scaling up/down (vertical scaling) means increasing or decreasing the resources (like CPU, RAM) of a single Amazon EC2 instance
+
 SCALE UP:INCREASING RESOURCES LIKE CPU, RAM, VOLUME/STORAGE
 SCALE DOWN: DECREASING THE RESOURCES.
 
-HORIZONTAL SCALLING
+
+HORIZONTAL SCALLING:
+scaling out/in (horizontal scaling) involves adding or removing instances from an Auto Scaling group to handle workload changes. 
+
 SCALE OUT: INCREASING INSTANCES/ NEWLY ADD
 SCALE IN: DECREASE INSTANCES
 
