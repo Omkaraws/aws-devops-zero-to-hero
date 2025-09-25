@@ -1,6 +1,8 @@
 Certainely AWS lambda is a serverless computing service which provides by aws. it allows you to run code without provisioning/ managing servers. with lambda you can focus on your application code, and aws take care of the infra, scaling & servers maintainance.
 
 Important Terms Used in Lambda:
+
+
 a. Function: a function is a resource that you can invoke to run your code in AWS lambda. A function has code that processes events and a runtime that passes request and responses between lambda and the function code.
 
 b. Runtime: lambda runtimes allows functions in different languages to run in the same base execution environment. The runtime sits in between the lambda service and your function code relying invocation events, context information and responses between the two.
